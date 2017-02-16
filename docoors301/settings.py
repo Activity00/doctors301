@@ -93,5 +93,5 @@ DB_URI='localhost'
 DB_NAME='doctors'
 DB_USERNAME='root'
 DB_PASSWORD='root'
-IMAGES_STORE = '/images/'
+IMAGES_STORE = 'images'
 

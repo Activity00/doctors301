@@ -29,13 +29,13 @@ class MySqlPipeline(object):
         self.db.close()
     
     def process_item(self, item, spider):
-        print '*********************'
         cursor = self.db.cursor()
         try:
-            cursor.execute('insert into base_info(name,zc,ks,js,goodat,image_url) values(%s,%s,%s,%s,%s,%s)',(
-            item['name'],item['zc'],item['ks'],item['js'],item['goodat'],item['image_urls']))
+            cursor.execute('insert into base_info(name,zc,ks,js,goodat,image_url,path) values(%s,%s,%s,%s,%s,%s,%s)',(
+            item['name'],item['zc'],item['ks'],item['js'],item['goodat'],item['images'][0]['url'],item['images'][0]['path']))
             self.db.commit()
         except:
+            print '数据回滚'
             self.db.rollback()
         return item
     
