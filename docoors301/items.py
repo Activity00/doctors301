@@ -11,11 +11,11 @@ import scrapy
 class Docoors301Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    firstdpt=scrapy.Field()
-    seconddpt=scrapy.Field()
     name=scrapy.Field()
-    zc_one=scrapy.Field()
-    zc_two=scrapy.Field()
-    description=scrapy.Field()
-    good=scrapy.Field()
+    image_urls=scrapy.Field()#头像链接
+    zc=scrapy.Field()#职称
+    ks=scrapy.Field()#科室
+    js=scrapy.Field()#介绍
+    goodat=scrapy.Field()#擅长
+    
     
